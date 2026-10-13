@@ -1,0 +1,207 @@
+/* ==========================================================================
+   Honda Atlas Pakistan - Autonomous Neural Concierge & Voice Intelligence System
+   Luxury Automotive Dark-Mode Architecture & Neon Audio Visualizer Styling
+   ========================================================================== */
+
+:root {
+  --honda-red: #E40521;
+  --honda-red-glow: rgba(228, 5, 33, 0.45);
+  --honda-cyan: #00e5ff;
+  --honda-cyan-glow: rgba(0, 229, 255, 0.4);
+  --dark-bg: #09090b;
+  --dark-surface: #121217;
+  --dark-card: rgba(24, 24, 27, 0.75);
+  --dark-border: rgba(39, 39, 42, 0.8);
+  --text-primary: #f4f4f5;
+  --text-muted: #a1a1aa;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom luxury scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--honda-red);
+}
+
+/* Glassmorphism Containers */
+.glass-panel {
+  background: rgba(18, 18, 23, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(24, 24, 30, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(228, 5, 33, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px -5px var(--honda-red-glow);
+}
+
+.glass-modal {
+  background: rgba(14, 14, 18, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95);
+}
+
+/* Glowing Neon Elements */
+.neon-glow-red {
+  box-shadow: 0 0 25px var(--honda-red-glow);
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 25px var(--honda-cyan-glow);
+}
+
+.border-glow-red {
+  border-color: var(--honda-red);
+  box-shadow: 0 0 15px var(--honda-red-glow);
+}
+
+/* Audio Visualizer Canvas */
+#audio-visualizer-canvas {
+  width: 100%;
+  height: 48px;
+  background: transparent;
+  display: block;
+}
+
+/* Pulsing Recording State */
+.mic-recording {
+  animation: pulse-mic 1.4s infinite;
+  background-color: var(--honda-red) !important;
+  color: #ffffff !important;
+}
+
+@keyframes pulse-mic {
+  0% {
+    box-shadow: 0 0 0 0 rgba(228, 5, 33, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(228, 5, 33, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(228, 5, 33, 0);
+  }
+}
+
+/* Live Status Dot Pulse */
+.pulse-dot {
+  position: relative;
+}
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* Chat Bubble Accents */
+.chat-bubble-assistant {
+  background: rgba(30, 30, 38, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--honda-red);
+}
+
+.chat-bubble-user {
+  background: linear-gradient(135deg, rgba(228, 5, 33, 0.2), rgba(18, 18, 23, 0.8));
+  border: 1px solid rgba(228, 5, 33, 0.3);
+}
+
+/* Watermark Pristine Badge (Bottom-Left UI) */
+.developer-watermark {
+  position: fixed;
+  bottom: 14px;
+  left: 16px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(12, 12, 16, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  color: #d4d4d8;
+  transition: all 0.3s ease;
+}
+
+.developer-watermark:hover {
+  border-color: var(--honda-red);
+  box-shadow: 0 0 15px var(--honda-red-glow);
+  color: #ffffff;
+}
+
+/* Automotive Badge Animations */
+.badge-stock {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Range input luxury styling */
+input[type="range"] {
+  accent-color: var(--honda-red);
+}
+
+/* Print/Responsive tweaks */
+@media (max-width: 1024px) {
+  .developer-watermark {
+    bottom: 8px;
+    left: 8px;
+    padding: 4px 10px;
+    font-size: 0.65rem;
+  }
+}

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Environment Variables & Secrets
+.env
+
+# Database (Auto-created & seeded on first boot by database.py)
+*.db
+*.sqlite3
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Archives
+*.zip
