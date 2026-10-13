@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Honda Atlas Autonomous Neural Concierge & Voice Intelligence System
 
 > **Enterprise-grade automotive web application engineered for Honda Atlas Cars (Pakistan) Limited.**  
@@ -170,3 +171,7 @@ The script automatically locates the Python virtual environment, initializes the
 ---
 **Honda Atlas Cars (Pakistan) Limited • All Rights Reserved**  
 *Autonomous Neural Concierge Engineered by Engr. Muhaiman Awan*
+=======
+# honda-atlas-neural-concierge
+Enterprise AI web platform for Honda Atlas Pakistan. Features a Google Gemini + Roman Urdu voice intelligence pipeline, live audio wave visualizer, interactive virtual showroom, auto-leasing calculator, and secure administrative CRM inventory controller.
+>>>>>>> 0e6745f4a2768f1a7f0fc98f721ad0bf7a855132
